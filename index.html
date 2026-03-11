@@ -1,256 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bay Area Home Upgrades — Kitchen & Bathroom Remodeling in the Bay Area</title>
-    <meta name="description" content="Professional kitchen and bathroom remodeling in the Bay Area. 35% off kitchens, 25% off bathrooms, free 3D design. Licensed & insured. 21+ years experience.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
-        
-        .hero {
-            background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,58,95,0.88)),
-                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80') center/cover;
-            color: white;
-            padding: 80px 20px 100px;
-            text-align: center;
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.5px; }
-        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
-        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 24px; }
-        
-        .cta-btn {
-            display: inline-block;
-            background: #f59e0b;
-            color: #1a1a1a;
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.4); }
-        
-        .phone-link { display: block; margin-top: 16px; color: white; font-size: 1.1rem; text-decoration: none; opacity: 0.9; }
-        .phone-link:hover { opacity: 1; }
-        
-        .offers {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: -50px auto 60px;
-            padding: 0 20px;
-        }
-        .offer-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
-        }
-        .offer-card .discount { font-size: 2.4rem; font-weight: 800; color: #f59e0b; }
-        .offer-card h3 { margin: 8px 0; font-size: 1.2rem; }
-        .offer-card p { color: #666; font-size: 0.95rem; }
-        
-        .section { padding: 60px 20px; max-width: 960px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; margin-bottom: 16px; text-align: center; font-weight: 700; }
-        .section .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.05rem; }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-        .service-item {
-            background: #f8fafc;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .service-item img { width: 100%; height: 200px; object-fit: cover; }
-        .service-item .content { padding: 20px; }
-        .service-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
-        .service-item p { color: #666; font-size: 0.9rem; }
-        
-        .process {
-            background: #f8fafc;
-            padding: 60px 20px;
-        }
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .step { text-align: center; padding: 20px; }
-        .step-num {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px; height: 48px;
-            background: #1e3a5f;
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
-        .step p { color: #666; font-size: 0.9rem; }
-        
-        .trust {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .trust-items { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
-        .trust-item { text-align: center; }
-        .trust-item .num { font-size: 2rem; font-weight: 800; color: #1e3a5f; }
-        .trust-item .label { color: #666; font-size: 0.9rem; }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a5f, #0f172a);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .cta-section h2 { font-size: 2rem; margin-bottom: 12px; }
-        .cta-section p { opacity: 0.9; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        
-        footer {
-            background: #0f172a;
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: 24px 20px;
-            font-size: 0.85rem;
-        }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 2rem; }
-            .offers { grid-template-columns: 1fr; margin-top: -30px; }
-            .trust-items { gap: 24px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bay Area Home Upgrades — Remodeling & Renovation Experts</title>
+<meta name="description" content="Bay Area's trusted home upgrade experts. Kitchen upgrades, bathroom upgrades, full home remodeling, ADUs & more. 21+ years experience. Free consultation. (415) 907-9070">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #1B2A41;
+  --amber: #D97706;
+  --amber-light: #F59E0B;
+  --white: #FFFFFF;
+  --light-gray: #F8FAFC;
+  --charcoal: #374151;
+  --charcoal-light: #6B7280;
+  --border: #E5E7EB;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.2; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+.nav {
+  background: var(--navy);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+.nav-brand {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-brand span { color: var(--amber-light); }
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-phone {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-phone:hover { color: var(--amber-light); }
+.nav-btn {
+  background: var(--amber);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.nav-btn:hover { background: #B45309; }
+
+/* Hero — Full-width bold */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(27,42,65,0.78) 0%, rgba(27,42,65,0.65) 100%),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover no-repeat;
+}
+.hero-inner { max-width: 820px; padding: 80px 24px; }
+.hero-tag {
+  display: inline-block;
+  border: 2px solid var(--amber-light);
+  color: var(--amber-light);
+  padding: 8px 24px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+}
+.hero h1 { color: var(--white); font-size: 60px; margin-bottom: 20px; }
+.hero p { color: rgba(255,255,255,0.9); font-size: 20px; line-height: 1.7; margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-big {
+  padding: 18px 44px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.btn-amber { background: var(--amber); color: var(--white); }
+.btn-amber:hover { background: #B45309; transform: translateY(-2px); }
+.btn-white { background: var(--white); color: var(--navy); }
+.btn-white:hover { background: var(--light-gray); transform: translateY(-2px); }
+
+/* Stats Bar */
+.stats-bar { background: var(--white); padding: 40px 0; border-bottom: 1px solid var(--border); }
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+.stat-block { text-align: center; }
+.stat-block h3 { font-size: 40px; color: var(--amber); margin-bottom: 4px; }
+.stat-block p { font-size: 14px; color: var(--charcoal-light); font-weight: 500; }
+
+/* Upgrades Grid */
+.upgrades { padding: 80px 0; background: var(--light-gray); }
+.section-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--amber);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.section-title { font-size: 42px; margin-bottom: 16px; }
+.section-subtitle { font-size: 18px; color: var(--charcoal-light); max-width: 620px; margin-bottom: 52px; }
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.upgrade-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+.upgrade-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.upgrade-img { height: 220px; overflow: hidden; position: relative; }
+.upgrade-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.upgrade-card:hover .upgrade-img img { transform: scale(1.06); }
+.upgrade-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--amber);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.upgrade-body { padding: 28px; }
+.upgrade-body h3 { font-size: 22px; margin-bottom: 10px; }
+.upgrade-body p { color: var(--charcoal-light); font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
+.upgrade-link { color: var(--amber); font-weight: 600; text-decoration: none; font-size: 15px; }
+.upgrade-link:hover { text-decoration: underline; }
+
+/* Offers Section */
+.offers { padding: 80px 0; background: var(--white); }
+.offers-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+}
+.offer-box {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 44px 32px;
+  text-align: center;
+  color: var(--white);
+  transition: transform 0.3s;
+}
+.offer-box:hover { transform: translateY(-4px); }
+.offer-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 56px;
+  color: var(--amber-light);
+  margin-bottom: 8px;
+}
+.offer-box h3 { color: var(--white); font-size: 22px; margin-bottom: 12px; }
+.offer-box p { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.6; }
+
+/* Before/After */
+.transform { padding: 80px 0; background: var(--light-gray); }
+.transform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+.transform-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+.transform-card img { width: 100%; height: 100%; object-fit: cover; }
+.transform-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(transparent, rgba(27,42,65,0.9));
+  color: var(--white);
+}
+.transform-overlay h3 { color: var(--white); font-size: 24px; margin-bottom: 6px; }
+.transform-overlay p { font-size: 15px; opacity: 0.85; }
+
+/* Process */
+.process { padding: 80px 0; background: var(--white); }
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.p-card {
+  background: var(--light-gray);
+  border-radius: 10px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.p-num {
+  width: 48px;
+  height: 48px;
+  background: var(--amber);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  margin: 0 auto 16px;
+}
+.p-card h4 { font-size: 16px; margin-bottom: 8px; }
+.p-card p { font-size: 13px; color: var(--charcoal-light); line-height: 1.5; }
+
+/* Testimonials */
+.reviews { padding: 80px 0; background: var(--navy); color: var(--white); }
+.reviews .section-label { color: var(--amber-light); }
+.reviews .section-title { color: var(--white); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+.rev-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 40px;
+}
+.rev-stars { color: var(--amber-light); font-size: 20px; letter-spacing: 3px; margin-bottom: 20px; }
+.rev-card blockquote {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.rev-author { display: flex; align-items: center; gap: 14px; }
+.rev-avatar {
+  width: 46px;
+  height: 46px;
+  background: var(--amber);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 17px;
+}
+.rev-info p { font-weight: 600; font-size: 15px; }
+.rev-info span { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+/* Coverage */
+.coverage { padding: 80px 0; background: var(--light-gray); }
+.coverage-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.coverage h2 { font-size: 38px; margin-bottom: 20px; }
+.coverage p { font-size: 16px; color: var(--charcoal-light); line-height: 1.8; margin-bottom: 16px; }
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0;
+}
+.area-chip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.coverage-img { border-radius: 12px; overflow: hidden; }
+.coverage-img img { width: 100%; display: block; border-radius: 12px; }
+
+/* CTA */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--navy) 0%, #2D3F58 100%);
+  text-align: center;
+  color: var(--white);
+}
+.cta h2 { color: var(--white); font-size: 48px; margin-bottom: 16px; }
+.cta p { font-size: 19px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 36px; }
+.cta-phone {
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  color: var(--amber-light);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 28px;
+}
+.cta-phone:hover { color: var(--white); }
+.btn-primary {
+  background: var(--amber);
+  color: var(--white);
+  padding: 18px 44px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #B45309; transform: translateY(-2px); }
+.cta-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 20px; }
+
+/* Footer */
+.footer { background: #0F1A2A; color: rgba(255,255,255,0.65); padding: 48px 0 28px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+.footer h4 { color: var(--white); font-size: 17px; margin-bottom: 16px; }
+.footer p { font-size: 14px; line-height: 1.8; }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 10px; }
+.footer ul a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.footer ul a:hover { color: var(--amber-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-bottom a { color: var(--amber-light); text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 44px; }
+  .upgrades-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .offers-flex { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .transform-grid { grid-template-columns: 1fr; }
+  .process-cards { grid-template-columns: repeat(3, 1fr); }
+  .coverage-layout { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero { min-height: 75vh; }
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 17px; }
+  .stats-row { gap: 32px; }
+  .section-title { font-size: 32px; }
+  .process-cards { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .area-grid { grid-template-columns: 1fr 1fr; }
+  .cta h2 { font-size: 34px; }
+  .cta-phone { font-size: 30px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav-brand { font-size: 18px; }
+  .nav-phone { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .hero-inner { padding: 60px 16px; }
+  .stats-row { gap: 20px; }
+  .stat-block h3 { font-size: 30px; }
+  .process-cards { grid-template-columns: 1fr; }
+  .area-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-badge">Serving the Bay Area — Licensed & Insured</div>
-        <h1>Upgrade Your Bay Area Home Today</h1>
-        <p>Modern kitchens, luxury bathrooms, and full home renovations at prices you'll love.</p>
-        <a href="tel:4159079070" class="cta-btn">Get Your Free Estimate</a>
-        <a href="tel:4159079070" class="phone-link">Or call us: (415) 907-9070</a>
-    </section>
 
-    <div class="offers">
-        <div class="offer-card">
-            <div class="discount">35% Off</div>
-            <h3>Kitchen Remodels</h3>
-            <p>Transform your kitchen with a complete remodel at an unbeatable price.</p>
-        </div>
-        <div class="offer-card">
-            <div class="discount">25% Off</div>
-            <h3>Bathroom Remodels</h3>
-            <p>Upgrade your bathroom with quality renovations tailored to your style.</p>
-        </div>
-        <div class="offer-card">
-            <div class="discount">Free</div>
-            <h3>3D Design & Rendering</h3>
-            <p>See your dream space before we build it with complimentary 3D designs.</p>
-        </div>
+<!-- Nav -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Bay Area <span>Home Upgrades</span></a>
+      <div class="nav-right">
+        <a href="tel:4159079070" class="nav-phone">(415) 907-9070</a>
+        <a href="tel:4159079070" class="nav-btn">Free Consultation</a>
+      </div>
     </div>
+  </div>
+</nav>
 
-    <section class="section">
-        <h2>Our Services</h2>
-        <p class="subtitle">From kitchens and bathrooms to full home renovations, we handle it all.</p>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Kitchen Remodeling">
-                <div class="content">
-                    <h3>Kitchen Remodeling</h3>
-                    <p>Custom cabinetry, countertops, fixtures, and layouts designed around how you live.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Remodeling">
-                <div class="content">
-                    <h3>Bathroom Remodeling</h3>
-                    <p>Modern bathrooms with premium materials, expert tile work, and smart design.</p>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Full Home Renovation">
-                <div class="content">
-                    <h3>Full Home Renovation</h3>
-                    <p>Complete home transformations that increase your property value and quality of life.</p>
-                </div>
-            </div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Bay Area's Upgrade Experts</span>
+    <h1>Upgrade Your Bay Area Home -- Inside and Out</h1>
+    <p>From kitchen upgrades to complete home transformations, we've spent 21+ years helping Bay Area homeowners elevate their living spaces. Licensed, insured, and backed by 200+ five-star reviews.</p>
+    <div class="hero-ctas">
+      <a href="tel:4159079070" class="btn-big btn-amber">Call (415) 907-9070</a>
+      <a href="#upgrades" class="btn-big btn-white">Explore Upgrades</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-block">
+        <h3>21+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-block">
+        <h3>200+</h3>
+        <p>5-Star Reviews</p>
+      </div>
+      <div class="stat-block">
+        <h3>35%</h3>
+        <p>Off Kitchen Upgrades</p>
+      </div>
+      <div class="stat-block">
+        <h3>12hr</h3>
+        <p>Proposal Turnaround</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upgrades Grid -->
+<section class="upgrades" id="upgrades">
+  <div class="container">
+    <p class="section-label">Home Upgrades</p>
+    <h2 class="section-title">Every Upgrade Your Home Needs</h2>
+    <p class="section-subtitle">Whether it's a single room or a whole-home transformation, we deliver upgrades that add value, comfort, and style to your Bay Area home.</p>
+    <div class="upgrades-grid">
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Kitchen upgrade" loading="lazy">
+          <span class="upgrade-badge">35% Off</span>
         </div>
-    </section>
-
-    <section class="process">
-        <div style="max-width:960px;margin:0 auto;">
-            <h2 style="text-align:center;margin-bottom:40px;">How It Works</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <h3>Free Consultation</h3>
-                    <p>We visit your home, discuss your vision, and assess the project scope.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <h3>3D Design</h3>
-                    <p>See your new space in 3D before construction begins. Completely free.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <h3>Build & Install</h3>
-                    <p>Our expert team brings the design to life with quality craftsmanship.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">4</div>
-                    <h3>Final Walkthrough</h3>
-                    <p>We walk through every detail together to ensure your complete satisfaction.</p>
-                </div>
-            </div>
+        <div class="upgrade-body">
+          <h3>Kitchen Upgrades</h3>
+          <p>Custom cabinetry, premium countertops, modern layouts, and smart storage solutions that transform how you cook and entertain.</p>
+          <a href="tel:4159079070" class="upgrade-link">Get a Free Quote &rarr;</a>
         </div>
-    </section>
-
-    <section class="trust">
-        <h2>Why Homeowners Trust Us</h2>
-        <div class="trust-items">
-            <div class="trust-item">
-                <div class="num">21+</div>
-                <div class="label">Years Experience</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">200+</div>
-                <div class="label">5-Star Reviews</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">500+</div>
-                <div class="label">Projects Completed</div>
-            </div>
-            <div class="trust-item">
-                <div class="num">100%</div>
-                <div class="label">Licensed & Insured</div>
-            </div>
+      </div>
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=700&q=80" alt="Bathroom upgrade" loading="lazy">
+          <span class="upgrade-badge">25% Off</span>
         </div>
-    </section>
+        <div class="upgrade-body">
+          <h3>Bathroom Upgrades</h3>
+          <p>Spa-grade fixtures, custom tile work, frameless glass showers, and heated floors that turn your bathroom into a retreat.</p>
+          <a href="tel:4159079070" class="upgrade-link">Get a Free Quote &rarr;</a>
+        </div>
+      </div>
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Full home remodeling" loading="lazy">
+        </div>
+        <div class="upgrade-body">
+          <h3>Full Home Upgrades</h3>
+          <p>Comprehensive whole-home remodeling that updates every room to modern standards -- from flooring to fixtures, walls to windows.</p>
+          <a href="tel:4159079070" class="upgrade-link">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=700&q=80" alt="ADU construction" loading="lazy">
+        </div>
+        <div class="upgrade-body">
+          <h3>ADU Construction</h3>
+          <p>Add a fully-permitted accessory dwelling unit to your property. Ideal for rental income, multigenerational living, or a private home office.</p>
+          <a href="tel:4159079070" class="upgrade-link">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80" alt="Home additions" loading="lazy">
+        </div>
+        <div class="upgrade-body">
+          <h3>Home Additions</h3>
+          <p>Expand your footprint with seamless additions -- extra bedrooms, family rooms, or second stories that blend with your home's architecture.</p>
+          <a href="tel:4159079070" class="upgrade-link">Learn More &rarr;</a>
+        </div>
+      </div>
+      <div class="upgrade-card">
+        <div class="upgrade-img">
+          <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=700&q=80" alt="Outdoor upgrades" loading="lazy">
+        </div>
+        <div class="upgrade-body">
+          <h3>Outdoor Upgrades</h3>
+          <p>Outdoor kitchens, covered patios, fire pits, and entertainment areas designed for Bay Area living and entertaining year-round.</p>
+          <a href="tel:4159079070" class="upgrade-link">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="cta-section">
-        <h2>Ready to Transform Your Home?</h2>
-        <p>Get a free estimate and see what's possible with our complimentary 3D design service.</p>
-        <a href="tel:4159079070" class="cta-btn">Call (415) 907-9070</a>
-    </section>
+<!-- Offers -->
+<section class="offers">
+  <div class="container">
+    <div style="text-align:center;">
+      <p class="section-label">Limited Time</p>
+      <h2 class="section-title">Upgrade for Less</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Take advantage of these exclusive offers and start your home upgrade today.</p>
+    </div>
+    <div class="offers-flex">
+      <div class="offer-box">
+        <div class="offer-num">35%</div>
+        <h3>Kitchen Upgrades</h3>
+        <p>Complete kitchen transformations with premium materials, custom design, and expert installation.</p>
+      </div>
+      <div class="offer-box">
+        <div class="offer-num">25%</div>
+        <h3>Bathroom Upgrades</h3>
+        <p>Modern bathroom renovations with designer fixtures, custom tile, and luxury finishes.</p>
+      </div>
+      <div class="offer-box">
+        <div class="offer-num">Free</div>
+        <h3>3D Design</h3>
+        <p>See your upgraded space in photorealistic 3D before any construction begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>Bay Area Home Upgrades — Serving the Bay Area</p>
-        <p style="margin-top:8px;">Serving the Greater Bay Area</p>
-        <p style="margin-top:8px;"><a href="tel:4159079070">(415) 907-9070</a></p>
-        <p style="margin-top:16px;">&copy; 2026 Bay Area Home Upgrades. All rights reserved.</p>
-    </footer>
+<!-- Transformation Showcase -->
+<section class="transform">
+  <div class="container">
+    <p class="section-label">Transformations</p>
+    <h2 class="section-title">Bay Area Homes, Upgraded</h2>
+    <p class="section-subtitle">Real upgrades from real Bay Area homeowners. Every project is unique -- just like the homes we work on.</p>
+    <div class="transform-grid">
+      <div class="transform-card">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Home renovation before and after" loading="lazy">
+        <div class="transform-overlay">
+          <h3>Concord Kitchen & Bath Upgrade</h3>
+          <p>Complete kitchen and master bath transformation</p>
+        </div>
+      </div>
+      <div class="transform-card">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80" alt="Modern home upgrade" loading="lazy">
+        <div class="transform-overlay">
+          <h3>Dublin Whole-Home Remodel</h3>
+          <p>Full interior upgrade with open-concept living</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process">
+  <div class="container">
+    <div style="text-align:center;">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">Your Upgrade in 5 Easy Steps</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">We make upgrading your home simple, transparent, and stress-free.</p>
+    </div>
+    <div class="process-cards">
+      <div class="p-card">
+        <div class="p-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>We visit your home, discuss your goals, and assess the project scope.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">2</div>
+        <h4>Proposal in 12hrs</h4>
+        <p>A detailed, transparent proposal with pricing delivered fast.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">3</div>
+        <h4>3D Design</h4>
+        <p>Photorealistic renderings so you can see your upgrade before it happens.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">4</div>
+        <h4>Materials Selection</h4>
+        <p>Choose from a curated selection of premium materials and finishes.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">5</div>
+        <h4>Construction</h4>
+        <p>Expert crews deliver your upgrade on time and on budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="reviews">
+  <div class="container">
+    <div style="text-align:center;">
+      <p class="section-label">Homeowner Reviews</p>
+      <h2 class="section-title">Bay Area Homeowners Love Their Upgrades</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev-card">
+        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We upgraded our entire kitchen and both bathrooms in our Concord home. The team managed everything from design to final walkthrough. The 3D renderings were incredibly accurate, and the finished product exceeded our expectations. It feels like a brand new house."</blockquote>
+        <div class="rev-author">
+          <div class="rev-avatar">SK</div>
+          <div class="rev-info">
+            <p>Sarah K.</p>
+            <span>Concord, CA</span>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We hired them for a full home upgrade in Dublin -- kitchen, floors, lighting, and an outdoor patio. They were organized, communicative, and the quality of work was exceptional. Our neighbors have been asking for their number ever since. Highly recommend."</blockquote>
+        <div class="rev-author">
+          <div class="rev-avatar">MR</div>
+          <div class="rev-info">
+            <p>Michael R.</p>
+            <span>Dublin, CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage Area -->
+<section class="coverage">
+  <div class="container">
+    <div class="coverage-layout">
+      <div>
+        <p class="section-label">Service Area</p>
+        <h2>Upgrading Homes Across the Bay Area</h2>
+        <p>From the East Bay to the Peninsula, we bring 21+ years of remodeling expertise to communities throughout the San Francisco Bay Area. Every home is different, and we tailor our approach to fit your neighborhood, your home's style, and your vision.</p>
+        <p>Financing is available on all projects, so you can upgrade your home on a timeline that works for your budget.</p>
+        <div class="area-grid">
+          <div class="area-chip">Concord</div>
+          <div class="area-chip">Dublin</div>
+          <div class="area-chip">Walnut Creek</div>
+          <div class="area-chip">Pleasanton</div>
+          <div class="area-chip">San Ramon</div>
+          <div class="area-chip">Alameda</div>
+          <div class="area-chip">Oakland</div>
+          <div class="area-chip">Fremont</div>
+          <div class="area-chip">Danville</div>
+        </div>
+        <a href="tel:4159079070" class="btn-primary" style="margin-top:16px;">Schedule a Free Visit</a>
+      </div>
+      <div class="coverage-img">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Beautiful Bay Area home" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Start Your Home Upgrade Today</h2>
+    <p>Free consultation, 12-hour proposal, and a 3D preview of your upgraded space. One call is all it takes.</p>
+    <a href="tel:4159079070" class="cta-phone">(415) 907-9070</a>
+    <a href="tel:4159079070" class="btn-primary">Book Your Free Consultation</a>
+    <p class="cta-note">Licensed & Insured | Financing Available | 200+ Five-Star Reviews</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Bay Area Home Upgrades</h4>
+        <p>The Bay Area's trusted home upgrade experts. 21+ years of experience delivering premium kitchen upgrades, bathroom upgrades, whole-home remodeling, ADUs, and outdoor transformations. Licensed, insured, and financing available.</p>
+      </div>
+      <div>
+        <h4>Upgrades</h4>
+        <ul>
+          <li><a href="#">Kitchen Upgrades</a></li>
+          <li><a href="#">Bathroom Upgrades</a></li>
+          <li><a href="#">Full Home Upgrades</a></li>
+          <li><a href="#">ADU Construction</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More Services</h4>
+        <ul>
+          <li><a href="#">Home Additions</a></li>
+          <li><a href="#">Outdoor Upgrades</a></li>
+          <li><a href="#">3D Design</a></li>
+          <li><a href="#">Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:4159079070">(415) 907-9070</a></li>
+          <li><a href="#">Bay Area, CA</a></li>
+          <li><a href="#">Free Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Bay Area Home Upgrades. Licensed & Insured.</span>
+      <a href="tel:4159079070">(415) 907-9070</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
